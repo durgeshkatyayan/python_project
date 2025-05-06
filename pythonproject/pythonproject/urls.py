@@ -21,5 +21,6 @@ from .views import hello
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',hello),
-    path('hello',include('myapi.urls'))
+    path('hello',include('myapi.urls')),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
